@@ -1,0 +1,52 @@
+<!-- <input type="text" 
+[value] = "username" 
+(input)="username = $event.target.value">
+{{username}}
+<span (click)="handleClick()">
+    {{result}}
+</span> -->
+
+<!-- 指令完成上方是图片 下方是文字说明的效果 -->
+<!-- 指令依附于模板 -->
+<!-- 对每一个图片和文字的组合都用命令来修饰 -->
+<div
+  class="container"
+  [ngStyle]="{
+    'grid-template-rows': templateRows,
+    'grid-template-columns': templateColumns
+  }"
+  (scroll)="handleScroll($event)"
+>
+  <div appGridItem *ngFor="let item of channels">
+    <img
+      [src]="item.icon"
+      [alt]=""
+      appGridItemImage
+      [height]="'3rem'"
+      [width]="'3rem'"
+      [objectStyle]="'cover'"
+    />
+    {{item.title}}
+  </div>
+</div>
+
+<div class="underline" *ngIf="scrollable">
+  <div class="highlight" [ngStyle]="{ margin: sliderMargin }"></div>
+</div>
+
+
+
+<!-- 自己写的简单样式 -->
+<!-- 没有输入型属性 -->
+<!-- 没有display-colums和相应的适应 -->
+<!-- <div class="container">
+    <div *ngFor="let item of channels">
+        <img 
+        class="image"
+        [src]="item.icon"
+        >
+    <span class="item-title">{{item.title}}</span>
+        
+    </div>
+</div> -->
+

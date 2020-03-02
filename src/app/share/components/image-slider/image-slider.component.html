@@ -1,0 +1,18 @@
+<div class="container" [ngStyle]="{'height': scrollHeight}">
+  <div class="image-slider" #imageSlider (scroll)="handleScroll($event)">
+    <img
+    #img 
+    *ngFor="let slider of sliders" 
+    [src]="slider.imageUrl" 
+    [alt]="slider.caption">
+  </div>
+  <div class="nav-section">
+    <!-- 此处的span是轮播图中的小圆点，每个图片都有一个圆点和对应的样式，这里只是把样式重新排列 -->
+    <span 
+    *ngFor="let _ of sliders; let idx = index" 
+    class="slide-button"
+    [ngClass]="{'slide-button-selected': idx === selectedIndex}"
+    >
+    </span>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ul [ngStyle]="{'background-color':backgroundColor}">
+<li *ngFor = "let item of tabs; let i = index">
+    <a
+    [ngStyle]="{'color' : i === selectIndex ? titleActiveColor : titleColor}"
+    (click) = "handleClick(i)"
+    >{{ item.title }}</a>
+    <span [ngStyle]="{ 'background-color' : indicatorColor }" *ngIf="i === selectIndex" class="indicator"></span >
+    
+</li>
+
+</ul>
+<ng-content></ng-content>

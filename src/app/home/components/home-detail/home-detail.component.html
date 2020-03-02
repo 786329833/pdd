@@ -1,0 +1,16 @@
+<div *ngIf="selectedTablink === 'hot'; else other">
+  <!-- 轮播图 -->
+  <app-image-slider [sliders]="imageSliders"></app-image-slider>
+  <!-- 包包衬衫 -->
+  <app-horizontal-grid></app-horizontal-grid>
+</div>
+
+<ng-template #other>
+  Other works!
+</ng-template>
+
+<a [routerLink]="['grand']" routerLinkActive="active" [queryParams]="{name: 'zhang', gender: 'male'}">name</a>
+<router-outlet></router-outlet>
+
+<a [routerLink]="[{outlets: {second: ['aux']}}]">second</a>
+<router-outlet name="second"></router-outlet>

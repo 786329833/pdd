@@ -1,0 +1,18 @@
+<!-- 顶部红色背景的导航条 -->
+<app-top-bar 
+[tabs]="tabs"
+[backgroundColor]="'red'"
+[titleActiveColor] = "'green'"
+[titleColor]="'yellows'"
+[indicatorColor]="'pink'"
+(tabSelected)="handleSelection($event)"
+>
+</app-top-bar>
+
+
+<router-outlet></router-outlet>
+<!-- 以下是路由插入的东西 -->
+<!-- 轮播图 -->
+<!-- <app-image-slider [sliders]="imageSliders"></app-image-slider> -->
+<!-- 包包衬衫 -->
+<!-- <app-horizontal-grid [(username)] = "username"></app-horizontal-grid> -->

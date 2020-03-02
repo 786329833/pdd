@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "http://www.pengpeng.online/",
+        "secure": false,
+        "pathRewrite": {"^/api": ""}
+    }
+}
+

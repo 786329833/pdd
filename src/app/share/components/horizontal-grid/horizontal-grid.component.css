@@ -1,0 +1,45 @@
+input {
+    border: 1px solid black;
+}
+
+:host{
+    display: flex;
+    overflow-x: auto;
+}
+
+.container{
+    display: grid;
+    background-color: white;
+    padding: 5px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    place-content: stretch;
+    place-items: center;
+    grid-gap: 0.4rem;
+    grid-auto-flow: row;
+}
+
+
+
+/* <!-- 自己写的简单样式 -->
+<!-- 没有输入型属性 -->
+<!-- 没有display-colums和相应的适应 --> */
+/* .container{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(8, 4rem);
+    grid-gap: 0.4rem;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.container .image{
+    width: 4rem;
+    height: 4rem;
+}
+
+.container .title{
+    text-align: center;
+} */
