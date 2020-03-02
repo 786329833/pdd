@@ -15,6 +15,7 @@ export class HomeDetailComponent implements OnInit {
   username = '';
   selectedTablink;
   imageSliders: ImageSlide[] = [];
+  dd = 1;
 
   ngOnInit() {
     this.service.getImageSlider().subscribe(sliders => {
